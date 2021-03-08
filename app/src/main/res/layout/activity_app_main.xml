@@ -21,4 +21,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+    <com.act.sdk.wifianalyser.view.BandTextsView
+        android:id="@+id/channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <com.act.sdk.wifianalyser.view.BandTextsView
+        android:id="@+id/signal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

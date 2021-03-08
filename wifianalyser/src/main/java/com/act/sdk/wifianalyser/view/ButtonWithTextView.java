@@ -24,6 +24,6 @@ public class ButtonWithTextView extends FrameLayout {
     }
 
     private void initView() {
-        inflate(getContext(), R.layout.layout_signal_strength, this);
+        inflate(getContext(), R.layout.layout_button_with_texts, this);
     }
 }

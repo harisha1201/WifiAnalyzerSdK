@@ -7,18 +7,18 @@ import android.widget.FrameLayout;
 
 import com.act.sdk.wifianalyser.R;
 
-public class ConnectedSignalTextsView extends FrameLayout {
-    public ConnectedSignalTextsView(Context context, AttributeSet attrs, int defStyle) {
+public class ChannelTextsView extends FrameLayout {
+    public ChannelTextsView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initView();
     }
 
-    public ConnectedSignalTextsView(Context context, AttributeSet attrs) {
+    public ChannelTextsView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public ConnectedSignalTextsView(Context context) {
+    public ChannelTextsView(Context context) {
         super(context);
         initView();
     }

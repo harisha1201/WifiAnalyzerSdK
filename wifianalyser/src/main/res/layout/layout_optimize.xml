@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/optimize"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/scan_border"
+        android:drawableStart="@drawable/optimizeb"
+        android:drawableLeft="@drawable/optimizeb"
+        android:paddingLeft="@dimen/_10dp"
+        android:text="@string/optimize"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+
+    </Button>
+</LinearLayout>

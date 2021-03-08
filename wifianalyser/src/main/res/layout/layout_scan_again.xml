@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/scanagain"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/scan_border"
+        android:drawableStart="@drawable/wifi_reset"
+        android:drawableLeft="@drawable/wifi_reset"
+        android:paddingLeft="@dimen/_10dp"
+        android:text="@string/scan_again"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/_10dp">
+
+    </Button>
+</LinearLayout>

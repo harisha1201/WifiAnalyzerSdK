@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.act.sdk.wifianalyser">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:extractNativeLibs="false"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.SdkLoginActivity" />
+        <activity
+            android:name=".view.PermissionActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.SDKMainActivity"
+            android:parentActivityName=".view.SdkLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SdkLoginActivity" />
+        </activity>
+        <activity
+            android:name=".view.TestNeighbourWifiActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.UserInfoActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.ConnectedDeviceActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.DeviceInfoActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.DeviceStatusActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.GetSSIDActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.SDKMainActivity" />
+        </activity>
+        <activity
+            android:name=".view.UpdateDetailsActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.UpdateDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".view.DeviceRebootActivity"
+            android:parentActivityName=".view.SDKMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.UpdateDetailsActivity" />
+        </activity>
+
+        <receiver android:name=".WifiReceiver">
+            <intent-filter>
+                <action android:name="some" />
+                <action android:name="stuff" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

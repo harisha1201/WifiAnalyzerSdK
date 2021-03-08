@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.act.sdk.wifianalyser.view.SDKMainActivity">
+
+    <TextView android:id="@+id/txt_request_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:text="@string/request"
+        android:textSize="17sp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollHorizontally="false"
+        android:layout_marginStart="@dimen/_10dp" />
+
+    <TextView android:id="@+id/txt_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_marginRight="@dimen/_20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:text="@string/loading"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollHorizontally="false"
+        />
+    <TextView android:id="@+id/txt_response_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:text="@string/response"
+        android:textSize="17sp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollHorizontally="false"
+        android:layout_marginStart="@dimen/_10dp" />
+
+    <TextView android:id="@+id/txt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollHorizontally="false"
+        />
+</LinearLayout>

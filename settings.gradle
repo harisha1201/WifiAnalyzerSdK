@@ -1,0 +1,3 @@
+include ':wifianalyser'
+include ':app'
+rootProject.name = "SDKLibraryApplication"

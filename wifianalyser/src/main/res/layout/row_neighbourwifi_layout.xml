@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/aa"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/macAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/mac_address"
+            />
+        <TextView
+            android:id="@+id/chanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/channel"
+            />
+        <TextView
+            android:id="@+id/chanelnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/channel_num"
+            />
+        <TextView
+            android:id="@+id/band"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/band"
+            />
+        <TextView
+            android:id="@+id/signalStrength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/signal_strength"
+            />
+        <TextView
+            android:id="@+id/signalLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/signal_level"
+            />
+        <TextView
+            android:id="@+id/linkSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/link_speed"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+<!--
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/aa"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/macAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ssid"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/mac_address"
+            />
+        <TextView
+            android:id="@+id/chanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/macAddress"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/channel"
+            />
+        <TextView
+            android:id="@+id/chanelnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chanel"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/channel_num"
+            />
+        <TextView
+            android:id="@+id/band"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chanelnumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/band"
+            />
+        <TextView
+            android:id="@+id/signalStrength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/band"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/signal_strength"
+            />
+        <TextView
+            android:id="@+id/signalLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signalStrength"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/signal_level"
+            />
+        <TextView
+            android:id="@+id/linkSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signalLevel"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="2dp"
+            android:text="@string/link_speed"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+-->

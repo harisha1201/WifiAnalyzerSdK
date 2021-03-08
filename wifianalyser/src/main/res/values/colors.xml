@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <!-- Act color codes-->
+    <color name="colorPrimary">#EE3135</color>
+    <color name="gray">#A0A3A3</color>
+    <color name="green">#006400</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="light_green">#32CD32</color>
+    <color name="red">#FF0000</color>
+    <color name="login_gray">#EDEFEE</color>
+
+</resources>

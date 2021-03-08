@@ -7,23 +7,23 @@ import android.widget.FrameLayout;
 
 import com.act.sdk.wifianalyser.R;
 
-public class SignalStrengthView extends FrameLayout {
-    public SignalStrengthView(Context context, AttributeSet attrs, int defStyle) {
+public class HeadingCenterView extends FrameLayout {
+    public HeadingCenterView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initView();
     }
 
-    public SignalStrengthView(Context context, AttributeSet attrs) {
+    public HeadingCenterView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public SignalStrengthView(Context context) {
+    public HeadingCenterView(Context context) {
         super(context);
         initView();
     }
 
     private void initView() {
-        inflate(getContext(), R.layout.layout_signal_strength, this);
+        inflate(getContext(), R.layout.layout_heading_center, this);
     }
 }

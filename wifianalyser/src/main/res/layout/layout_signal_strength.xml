@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/_10dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="@dimen/_10dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="3dp"
+    android:weightSum="13"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="12"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/poor"
+                    android:textSize="@dimen/_10dp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="7dp"
+                    android:background="@drawable/red_border" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fair"
+                    android:textSize="@dimen/_10dp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="7dp"
+                    android:background="@drawable/yellow_border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/good"
+                    android:textSize="@dimen/_10dp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="7dp"
+                    android:background="@drawable/lightgreen_border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/excellent"
+                    android:textSize="@dimen/_10dp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="7dp"
+                    android:background="@drawable/green_border" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="3dp">
+
+            <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+                android:id="@+id/segmented_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:padding="3dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/scanagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/scan_border"
+        android:drawableStart="@drawable/wifi_reset"
+        android:drawableLeft="@drawable/wifi_reset"
+        android:paddingLeft="@dimen/_10dp"
+        android:text="@string/scan_again"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/_10dp">
+
+    </Button>
+
+</LinearLayout>

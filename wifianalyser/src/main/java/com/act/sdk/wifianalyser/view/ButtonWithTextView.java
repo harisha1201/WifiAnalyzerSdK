@@ -7,18 +7,18 @@ import android.widget.FrameLayout;
 
 import com.act.sdk.wifianalyser.R;
 
-public class SignalStrengthView extends FrameLayout {
-    public SignalStrengthView(Context context, AttributeSet attrs, int defStyle) {
+public class ButtonWithTextView extends FrameLayout {
+    public ButtonWithTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initView();
     }
 
-    public SignalStrengthView(Context context, AttributeSet attrs) {
+    public ButtonWithTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public SignalStrengthView(Context context) {
+    public ButtonWithTextView(Context context) {
         super(context);
         initView();
     }

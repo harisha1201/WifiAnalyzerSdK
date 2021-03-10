@@ -58,6 +58,7 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class ActWifiManager {
     Context context;
+  // ActWifiListener actWifiListener;
 
 
     private RequestQueue queue;
@@ -65,6 +66,11 @@ public class ActWifiManager {
     public ActWifiManager(Context context) {
         this.context = context;
     }
+
+  /*  public ActWifiManager(Context context, ActWifiListener actWifiListener) {
+        this.context = context;
+        this.actWifiListener = actWifiListener;
+    }*/
 
     /**
      * This method checks the wifi is on or off and returns the boolean value.
@@ -837,5 +843,83 @@ public class ActWifiManager {
         }
     }
 
+/*
+
+
+
+    */
+/**
+     * This method will return the connected device info details with json format request
+     *
+     * @param ctx Application context
+     * @throws NoSuchPaddingException
+     * @throws InvalidKeyException
+     * @throws NoSuchAlgorithmException
+     * @throws IllegalBlockSizeException
+     * @throws BadPaddingException
+     * @throws InvalidAlgorithmParameterException
+     * @throws JSONException
+     *//*
+
+    public void connectedDeviceJsonRequestnew(Context ctx) throws NoSuchPaddingException,
+            InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException,
+            BadPaddingException, InvalidAlgorithmParameterException, JSONException {
+      //  ActWifiListener actWifiListener;
+        actWifiListener = (ActWifiListener) ctx;
+
+        RequestQueue requestQueue = Volley.newRequestQueue(ctx);
+
+        JSONObject object = new JSONObject();
+        try {
+            object.put("loginname", LocalStore.getLogedName(context));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String encodedRequestBody = object.toString();
+        JSONObject requestJson = new JSONObject();
+        requestJson.put("request", encrypt(encodedRequestBody));
+        Log.i("encrypted conn post", encrypt(encodedRequestBody));
+
+        String url = WifiConstants.CONNECTED_DEVICES_URL;
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url,
+                requestJson,
+                response -> {
+                    Log.i("connectedInfoResponse", response.toString());
+
+                    try {
+                        String decryptedJson = decryptRequest(response.get("response").
+                                toString());
+                        Log.i("conncectedDecJsonnew", decryptedJson);
+                        Gson gson = new Gson();
+                        ConnectedDeviceResponse connectedDeviceResponse = gson.
+                                fromJson(decryptedJson, ConnectedDeviceResponse.class);
+                        actWifiListener.connectedDevices(connectedDeviceResponse);
+                        actWifiListener.allJsonResponse(decryptedJson);
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    } catch (BadPaddingException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchAlgorithmException e) {
+                        e.printStackTrace();
+                    } catch (InvalidKeyException e) {
+                        e.printStackTrace();
+                    } catch (InvalidAlgorithmParameterException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchPaddingException e) {
+                        e.printStackTrace();
+                    } catch (IllegalBlockSizeException e) {
+                        e.printStackTrace();
+                    }
+
+                }, error -> {
+        });
+        requestQueue.add(jsonObjectRequest);
+    }
+*/
 
 }

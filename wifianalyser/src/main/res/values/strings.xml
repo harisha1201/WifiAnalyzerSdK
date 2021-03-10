@@ -73,10 +73,15 @@
     <string name="optimize_my_wi_fi">Optimize My Wi-Fi</string>
     <string name="best_wi_fi_spot_finder">Best Wi-Fi spot finder</string>
     <string name="connected_device">Connected Device:</string>
+    <string name="your_current_wi_fi">Your current Wi-Fi</string>
+    <string name="your_router_is_congested_tap_on_optimize_to_move_an_optimal_channel">Your router is congested tap on Optimize to move an optimal channel</string>
+    <string name="you_are_on_best_possible_channel_n_select_optimize_your_wi_fi">You are on best possible channel. \n Select optimize your Wi-Fi.</string>
 
     <string-array name="paramType">
         <item>SSID_2</item>
         <item>SSID_5</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

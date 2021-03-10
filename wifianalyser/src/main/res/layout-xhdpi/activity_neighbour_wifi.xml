@@ -181,7 +181,7 @@
                 <Button
                     android:id="@+id/scanagain"
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
@@ -202,7 +202,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="290dp"
+                android:layout_marginTop="300dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -362,7 +362,7 @@
                 <Button
                     android:id="@+id/optimize"
                     android:layout_width="150dp"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/scan_border"
                     android:drawableStart="@drawable/optimizeb"
@@ -387,6 +387,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/neighbour_wifi_card"
                 android:layout_width="180dp"
                 android:layout_height="135dp"
                 android:elevation="10sp"
@@ -424,6 +425,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/best_wifispot"
                 android:layout_width="180dp"
                 android:layout_height="135dp"
                 android:elevation="10sp"
@@ -469,6 +471,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/optimize_wifi"
                 android:layout_width="180dp"
                 android:layout_height="135dp"
                 android:elevation="10sp"
@@ -511,7 +514,7 @@
                 android:layout_height="135dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
-
+                android:id="@+id/diagonstic_card"
                 app:cardCornerRadius="10sp"
                 app:cardElevation="10sp"
                 app:cardPreventCornerOverlap="false"
@@ -547,6 +550,8 @@
 
         </LinearLayout>
         <TextView
+            android:visibility="gone"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -567,6 +572,8 @@
             android:visibility="visible" />
 
         <LinearLayout
+            android:visibility="gone"
+
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -54,7 +54,7 @@ public class WifiReceiver extends BroadcastReceiver {
                     networkinfoDetails = new NetworkInfo();
                     networkinfoDetails.setSSID(scanResult.SSID);
                     networkinfoDetails.setMacAddress(scanResult.BSSID);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         networkinfoDetails.setChannel(String.valueOf(scanResult.channelWidth));
                     }
                     float bandwidth = (float) (scanResult.frequency) / 1000;

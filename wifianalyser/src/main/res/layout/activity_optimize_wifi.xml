@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_one_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:elevation="10sp"
+                app:cardBackgroundColor="@color/login_gray"
+                app:cardCornerRadius="10sp"
+                app:cardElevation="10sp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/congestd_text"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/you_are_on_best_possible_channel_n_select_optimize_your_wi_fi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <Button
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:layout_marginBottom="@dimen/_20dp"
+                        android:id="@+id/optimize"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/scan_border"
+                        android:drawableStart="@drawable/optimizeb"
+                        android:drawableLeft="@drawable/optimizeb"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:text="@string/optimize"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold">
+
+                    </Button>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/login_router"
+                            android:layout_width="180dp"
+                            android:layout_height="135dp"
+                            android:elevation="10sp"
+                            app:cardBackgroundColor="@color/login_gray"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/neighbouring_wifi_img"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:textSize="20sp"
+                                    android:src="@drawable/w"
+                                    android:layout_height="30dp"
+                                    app:tint="@color/red" />
+
+                                <TextView
+                                    android:id="@+id/login_router"
+                                    android:layout_below="@id/neighbouring_wifi_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:layout_marginBottom="@dimen/_20dp"
+                                    android:text="Login to Router"
+                                    android:layout_marginTop="10dp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/update_wifi"
+                            android:layout_width="180dp"
+                            android:layout_height="135dp"
+                            android:elevation="10sp"
+                            app:cardBackgroundColor="@color/login_gray"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/wifi_spot_img"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:textSize="20sp"
+                                    android:src="@drawable/spotfinder"
+                                    android:layout_height="30dp"
+                                    app:tint="@color/red" />
+
+
+                                <TextView
+                                    android:id="@+id/wifi_spot_txt"
+                                    android:layout_below="@id/wifi_spot_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:layout_marginBottom="@dimen/_20dp"
+                                    android:text="Update Wi-Fi name"
+                                    android:layout_marginTop="10dp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/change_wifi_pwd"
+                            android:layout_width="180dp"
+                            android:layout_height="135dp"
+                            android:elevation="10sp"
+                            app:cardBackgroundColor="@color/login_gray"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/optimise_img"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:textSize="20sp"
+                                    android:src="@drawable/optimize"
+                                    android:layout_height="30dp"
+                                    app:tint="@color/red" />
+
+
+                                <TextView
+                                    android:id="@+id/optimise_txt"
+                                    android:layout_below="@id/optimise_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:layout_marginBottom="@dimen/_20dp"
+                                    android:text="Change Wi-Fi Password"
+                                    android:layout_marginTop="10dp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="180dp"
+                            android:layout_height="135dp"
+                            android:elevation="10sp"
+                            app:cardBackgroundColor="@color/login_gray"
+                            android:id="@+id/reboot"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="10sp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/diagnostic_img"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:textSize="20sp"
+                                    android:src="@drawable/diagnostics"
+                                    android:layout_height="30dp"
+                                    app:tint="@color/red" />
+
+
+                                <TextView
+                                    android:id="@+id/diagnostic_txt"
+                                    android:layout_below="@id/diagnostic_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:layout_marginBottom="@dimen/_20dp"
+                                    android:text="Restart Router"
+                                    android:layout_marginTop="10dp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

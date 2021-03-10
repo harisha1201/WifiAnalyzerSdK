@@ -2,6 +2,7 @@ package com.act.sdk.wifianalyser.view;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -76,12 +78,13 @@ public class TestNeighbourWifiActivity extends AppCompatActivity implements ActW
     ActWifiManagerBuilder actWifiManagerBuilder;
     //  RelativeLayout llLoadng;
     SDKMainAdapter SDKMainAdapter;
-    Button btnScanAgain;
+    Button btnScanAgain,btnOptimize;
     private GoogleApiClient googleApiClient;
     final static int REQUEST_LOCATION = 199;
     //  ProgressDialog progressDialog;
     SegmentedProgressBar segmentedProgressBar;
     TextView conn_band, conn_channel, conn_signal,txtDeviceConnected;
+    CardView neighbourWifiCard, optimize_wifiCard,diagnostics_card,wifiSpot_card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,8 +109,54 @@ public class TestNeighbourWifiActivity extends AppCompatActivity implements ActW
         btnScanAgain=findViewById(R.id.scanagain);
         txtDeviceConnected=findViewById(R.id.device_txt);
 
+        neighbourWifiCard=findViewById(R.id.neighbour_wifi_card);
+        optimize_wifiCard=findViewById(R.id.optimize_wifi);
+        diagnostics_card=findViewById(R.id.diagonstic_card);
+        wifiSpot_card=findViewById(R.id.best_wifispot);
+        btnOptimize=findViewById(R.id.optimize);
 
 
+        neighbourWifiCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent neighbour = new Intent(TestNeighbourWifiActivity.this, NeighbourWifiActivity.class);
+                startActivity(neighbour);
+
+            }
+        });
+        optimize_wifiCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent neighbour = new Intent(TestNeighbourWifiActivity.this, OptimizeWifiActivity.class);
+                startActivity(neighbour);
+
+            }
+        });
+
+        diagnostics_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent neighbour = new Intent(TestNeighbourWifiActivity.this, DiagnosticsActivity.class);
+                startActivity(neighbour);
+
+            }
+        });
+        wifiSpot_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent neighbour = new Intent(TestNeighbourWifiActivity.this, WifiSpotFinderActivity.class);
+                startActivity(neighbour);
+
+            }
+        });
+        btnOptimize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent neighbour = new Intent(TestNeighbourWifiActivity.this, WifiSpotFinderActivity.class);
+                startActivity(neighbour);
+
+            }
+        });
         btnScanAgain.setText(getResources().getString(R.string.scan_again));
         btnScanAgain.setTransformationMethod(null);
         segmentedProgressBar = (SegmentedProgressBar) findViewById(R.id.segmented_progressbar);
@@ -432,10 +481,6 @@ public class TestNeighbourWifiActivity extends AppCompatActivity implements ActW
 
                     ssid.setText(getResources().getString(R.string.connected_device)+"\n\n"+mainList.get(i).getSSID());
 
-
-                    //   System.out.println("band->"+mainList.get(i).getBandWidth()+" channel->"+
-                    //   mainList.get(i).getChannelNumber()+" signal strength->"+
-                    //   mainList.get(i).getSignalStrength());
 
                     if(mainList.get(i).getBandWidth()!=null)
                         conn_band.setText(mainList.get(i).getBandWidth());

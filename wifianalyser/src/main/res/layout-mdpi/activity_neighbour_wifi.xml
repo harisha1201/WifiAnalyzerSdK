@@ -387,6 +387,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/neighbour_wifi_card"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:elevation="10sp"
@@ -424,6 +425,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/best_wifispot"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:elevation="10sp"
@@ -469,6 +471,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/optimize_wifi"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:elevation="10sp"
@@ -511,7 +514,7 @@
                 android:layout_height="150dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
-
+                android:id="@+id/diagonstic_card"
                 app:cardCornerRadius="10sp"
                 app:cardElevation="10sp"
                 app:cardPreventCornerOverlap="false"
@@ -547,6 +550,7 @@
 
         </LinearLayout>
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -570,6 +574,7 @@
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginBottom="@dimen/_20dp"
             android:orientation="vertical">
 

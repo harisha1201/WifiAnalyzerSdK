@@ -97,8 +97,10 @@ public class SdkLoginActivity extends Activity implements ActWifiListener {
         progressDialog.cancel();
 
         if (userInfoResponseObj.getCode() == 100) {
+           /* Intent testIntent = new Intent(SdkLoginActivity.this,
+                    SDKMainActivity.class);*/
             Intent testIntent = new Intent(SdkLoginActivity.this,
-                    SDKMainActivity.class);
+                    SDKHomeMainActivity.class);
             startActivity(testIntent);
         } else {
 

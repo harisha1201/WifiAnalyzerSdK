@@ -169,7 +169,7 @@ public class SDKHomeMainActivity extends AppCompatActivity implements ActWifiLis
 
     }
 
-    private void getWifi() {
+    public void getWifi() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(SDKHomeMainActivity.this,
                     Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

@@ -1,77 +1,25 @@
 package com.act.sdk.wifianalyser.view;
 
-import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.IntentSender;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.location.LocationManager;
-import android.net.wifi.WifiManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.act.sdk.wifianalyser.ActWifiManager;
-import com.act.sdk.wifianalyser.ActWifiManagerBuilder;
 import com.act.sdk.wifianalyser.R;
-import com.act.sdk.wifianalyser.Util;
-import com.act.sdk.wifianalyser.WifiReceiver;
 import com.act.sdk.wifianalyser.model.ConnectedNetworkWifi;
 import com.act.sdk.wifianalyser.model.NearbyWifi;
 import com.act.sdk.wifianalyser.model.NetworkInfo;
-import com.act.sdk.wifianalyser.model.connectedDevices.ConnectedDeviceResponse;
-import com.act.sdk.wifianalyser.model.deviceInfo.DeviceInfoResponse;
-import com.act.sdk.wifianalyser.model.deviceReboot.DeviceRebootResponse;
-import com.act.sdk.wifianalyser.model.deviceStatus.DeviceStatusResponse;
-import com.act.sdk.wifianalyser.model.getSSID.GetSSIDResponse;
-import com.act.sdk.wifianalyser.model.updateDetails.UpdateDetailsResponse;
-import com.act.sdk.wifianalyser.model.userInfo.UserInfoResponse;
-import com.act.sdk.wifianalyser.presenter.ActWifiListener;
 import com.act.sdk.wifianalyser.presenter.MainActivityListener;
 import com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResult;
-import com.google.android.gms.location.LocationSettingsStatusCodes;
 
-import org.json.JSONException;
-
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 
 public class HomeFragment extends Fragment implements MainActivityListener {
 
@@ -81,6 +29,7 @@ public class HomeFragment extends Fragment implements MainActivityListener {
     TextView conn_band, conn_channel, conn_signal,txtDeviceConnected;
     CardView neighbourWifiCard, optimize_wifiCard,diagnostics_card,wifiSpot_card;
     Button btnScanAgain,btnOptimize;
+    LinearLayout ll_optimizie, ll_scan_again;
     ActWifiManager actWifiManager;
     View root;
 
@@ -95,6 +44,8 @@ public class HomeFragment extends Fragment implements MainActivityListener {
         conn_signal=root.findViewById(R.id.connected_signal);
         btnScanAgain=root.findViewById(R.id.scanagain);
         txtDeviceConnected=root.findViewById(R.id.device_txt);
+        ll_optimizie=root.findViewById(R.id.optimize_layout);
+        ll_scan_again=root.findViewById(R.id.scan_again);
 
         neighbourWifiCard=root.findViewById(R.id.neighbour_wifi_card);
         optimize_wifiCard=root.findViewById(R.id.optimize_wifi);
@@ -121,14 +72,35 @@ public class HomeFragment extends Fragment implements MainActivityListener {
         ((SDKHomeMainActivity)getActivity()).setOnDataListener(this);
 
 
+        btnScanAgain.setOnClickListener(v -> {
+            for (int count = 0; count < 3; count++) {
+                segmentedProgressBar.setFillColor(getResources().getColor(R.color.red));
+                segmentedProgressBar.setCompletedSegments(count);
+                segmentedProgressBar.playSegment(30000);
+
+            }
+
+            ((SDKHomeMainActivity)getActivity()).getWifi();
+        });
+
+        ll_scan_again.setOnClickListener(v -> {
+            for (int count = 0; count < 3; count++) {
+                segmentedProgressBar.setFillColor(getResources().getColor(R.color.red));
+                segmentedProgressBar.setCompletedSegments(count);
+                segmentedProgressBar.playSegment(30000);
+
+            }
+
+            ((SDKHomeMainActivity)getActivity()).getWifi();
+        });
+
+
         return root;
     }
 
 
     @Override
     public void neighbourWIFI(NearbyWifi responseObj) {
-
-        //   Log.i("fragment neighbour",responseObj.getNetworkinfo().get(0).getBandWidth());
 
         ArrayList<NetworkInfo> networkInfo = responseObj.getNetworkinfo();
         ArrayList<NetworkInfo> mainList = null;

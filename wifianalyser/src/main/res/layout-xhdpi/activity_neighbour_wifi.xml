@@ -18,7 +18,7 @@
             android:id="@+id/cv_one_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-150dp"
+            android:layout_marginTop="-180dp"
             android:layout_marginBottom="@dimen/_20dp"
             android:elevation="10sp"
             app:cardBackgroundColor="@color/login_gray"
@@ -31,10 +31,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="-60dp"
+                android:layout_marginTop="-50dp"
                 android:gravity="center"
                 android:text="@string/signal_strength"
-                android:textSize="@dimen/_20dp"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_10dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="-10dp"
                 android:layout_marginRight="@dimen/_10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -181,7 +181,7 @@
                 <Button
                     android:id="@+id/scanagain"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
@@ -191,18 +191,49 @@
                     android:drawableLeft="@drawable/wifi_reset"
                     android:paddingLeft="@dimen/_10dp"
                     android:text="@string/scan_again"
+                    android:visibility="gone"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textStyle="bold">
 
                 </Button>
+                <LinearLayout
+                    android:id="@+id/scan_again"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/scan_border"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/wifi_reset"
+                        android:layout_marginStart="5dp">
 
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/scan_again"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        >
+
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="260dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -226,7 +257,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,7 +281,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -273,18 +304,20 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10dp"
                     android:layout_height="wrap_content">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="170dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:elevation="10sp"
+
                         app:cardBackgroundColor="@color/login_gray"
                         app:cardCornerRadius="10sp"
                         app:cardElevation="10sp"
@@ -297,9 +330,9 @@
                                 android:id="@+id/info_text"
                                 android:gravity="center"
                                 android:layout_width="match_parent"
-                                android:layout_marginTop="@dimen/_10dp"
+                                android:layout_marginTop="5dp"
                                 android:textColor="@color/red"
-                                android:textSize="20sp"
+                                android:textSize="22sp"
                                 android:layout_height="wrap_content"
                                 android:text="4"
                                 />
@@ -311,7 +344,8 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:layout_marginBottom="@dimen/_20dp"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="@dimen/_10dp"
                                 android:text="@string/interfering_router_s"
                                 android:layout_marginTop="10dp" />
 
@@ -320,11 +354,10 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="170dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:elevation="10sp"
                         app:cardBackgroundColor="@color/login_gray"
-
                         app:cardCornerRadius="10sp"
                         app:cardElevation="10sp"
                         app:cardPreventCornerOverlap="false"
@@ -336,9 +369,9 @@
                                 android:id="@+id/device_txt"
                                 android:gravity="center"
                                 android:layout_width="match_parent"
-                                android:layout_marginTop="@dimen/_10dp"
+                                android:layout_marginTop="5dp"
                                 android:textColor="@color/red"
-                                android:textSize="20sp"
+                                android:textSize="22sp"
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 />
@@ -349,8 +382,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
+                                android:textSize="12sp"
                                 android:textColor="@color/black"
-                                android:layout_marginBottom="@dimen/_20dp"
+                                android:layout_marginBottom="@dimen/_10dp"
                                 android:text="@string/device_s_connected"
                                 android:layout_marginTop="10dp" />
 
@@ -362,7 +396,7 @@
                 <Button
                     android:id="@+id/optimize"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/scan_border"
                     android:drawableStart="@drawable/optimizeb"
@@ -371,11 +405,41 @@
                     android:text="@string/optimize"
                     android:layout_marginBottom="@dimen/_20dp"
                     android:textAllCaps="false"
+                    android:visibility="gone"
                     android:textColor="@color/white"
                     android:textStyle="bold">
 
                 </Button>
+                <LinearLayout
+                    android:id="@+id/optimize_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:background="@drawable/scan_border"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/optimizeb"
+                        android:layout_marginStart="5dp">
 
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/optimize"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        >
+
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -388,8 +452,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/neighbour_wifi_card"
-                android:layout_width="180dp"
-                android:layout_height="135dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
                 app:cardCornerRadius="10sp"
@@ -403,7 +467,7 @@
                         android:id="@+id/neighbouring_wifi_img"
                         android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="20sp"
                         android:src="@drawable/w"
                         android:layout_height="30dp"
@@ -415,8 +479,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="@dimen/_20dp"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:text="@string/nearbywifi"
                         android:layout_marginTop="10dp" />
 
@@ -426,8 +491,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/best_wifispot"
-                android:layout_width="180dp"
-                android:layout_height="135dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
                 app:cardCornerRadius="10sp"
@@ -441,7 +506,7 @@
                         android:id="@+id/wifi_spot_img"
                         android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="20sp"
                         android:src="@drawable/spotfinder"
                         android:layout_height="30dp"
@@ -454,8 +519,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="@dimen/_20dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:text="@string/best_wi_fi_spot_finder"
                         android:layout_marginTop="10dp" />
 
@@ -472,8 +538,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/optimize_wifi"
-                android:layout_width="180dp"
-                android:layout_height="135dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
                 app:cardCornerRadius="10sp"
@@ -487,7 +553,7 @@
                         android:id="@+id/optimise_img"
                         android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="20sp"
                         android:src="@drawable/optimize"
                         android:layout_height="30dp"
@@ -500,8 +566,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="@dimen/_20dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:text="@string/optimize_my_wi_fi"
                         android:layout_marginTop="10dp" />
 
@@ -510,8 +577,8 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
-                android:layout_height="135dp"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
                 android:elevation="10sp"
                 app:cardBackgroundColor="@color/login_gray"
                 android:id="@+id/diagonstic_card"
@@ -526,7 +593,7 @@
                         android:id="@+id/diagnostic_img"
                         android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="20sp"
                         android:src="@drawable/diagnostics"
                         android:layout_height="30dp"
@@ -539,8 +606,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginBottom="@dimen/_20dp"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="10dp"
                         android:text="@string/diagnostics"
                         android:layout_marginTop="10dp" />
 
@@ -573,7 +641,6 @@
 
         <LinearLayout
             android:visibility="gone"
-
             android:id="@+id/rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

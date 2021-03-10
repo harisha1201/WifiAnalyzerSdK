@@ -18,7 +18,7 @@
             android:id="@+id/cv_one_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-150dp"
+            android:layout_marginTop="-180dp"
             android:layout_marginBottom="@dimen/_20dp"
             android:elevation="10sp"
             app:cardBackgroundColor="@color/login_gray"
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="-60dp"
+                android:layout_marginTop="-80dp"
                 android:gravity="center"
                 android:text="@string/signal_strength"
                 android:textSize="@dimen/_20dp"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_10dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="-20dp"
                 android:layout_marginRight="@dimen/_10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -190,19 +190,50 @@
                     android:drawableStart="@drawable/wifi_reset"
                     android:drawableLeft="@drawable/wifi_reset"
                     android:paddingLeft="@dimen/_10dp"
+                    android:visibility="gone"
                     android:text="@string/scan_again"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textStyle="bold">
 
                 </Button>
+                <LinearLayout
+                    android:id="@+id/scan_again"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/scan_border"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/wifi_reset"
+                        android:layout_marginStart="5dp">
 
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="3dp"
+                        android:text="@string/scan_again"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        >
+
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="310dp"
+                android:layout_marginTop="300dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -226,7 +257,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,7 +281,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -273,12 +304,13 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="2.4GHz" />
+                        android:text="@string/loading"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10dp"
                     android:layout_height="wrap_content">
 
                     <androidx.cardview.widget.CardView
@@ -372,10 +404,40 @@
                     android:layout_marginBottom="@dimen/_20dp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
+                    android:visibility="gone"
                     android:textStyle="bold">
 
                 </Button>
+                <LinearLayout
+                    android:id="@+id/optimize_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:background="@drawable/scan_border"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/optimizeb"
+                        android:layout_marginStart="5dp">
 
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/optimize"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        >
+
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
 
 
